@@ -1,0 +1,3 @@
+== USPROXY SPIDER ==
+[domains]: us-proxy.org
+[items]: IP, PORT, COUNTRY, ANON, PROTOCOL
