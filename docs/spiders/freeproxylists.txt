@@ -1,0 +1,3 @@
+== FREEPROXYLISTS SPIDER ==
+[domains]: freeproxylists.net
+[items]: IP, PORT, COUNTRY, ANON, PROTOCOL
