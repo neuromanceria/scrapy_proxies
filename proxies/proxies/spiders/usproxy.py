@@ -4,9 +4,9 @@ import scrapy
 
 class UsproxySpider(scrapy.Spider):
     name = "usproxy"
-    allowed_domains = ["https://www.us-proxy.org/"]
+    allowed_domains = ["us-proxy.org"]
     start_urls = (
-        'http://www.https://www.us-proxy.org//',
+        'https://www.us-proxy.org/',
     )
 
     def parse(self, response):
