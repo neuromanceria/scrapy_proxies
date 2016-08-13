@@ -1,0 +1,21 @@
+=== ProxyItem ===
+->IP (string)
+Número do ip do servidor proxy. Exemplo: u"192.168.1.1"
+
+->PORT (int)
+Número da port ado servidor proxy. Exemplo: 8080
+
+->COUNTRY (string)
+Nome do país que está situado o servidor proxy. Exemplo u"USA"
+
+->ANON (string)
+Anonimato que o servidor proxy fornece. Exemplo u"elite proxy"
+
+->PROTOCOL (string)
+Protocolo a qual o servidor proxy usa. Exemplo u"HTTP"
+
+->URL_CRAWL (string)
+Url da site em que o item foi capturado. Exemplo u"https://www.us-proxy.org/"
+
+->DATE_CRAWL (datetime)
+Data em que o o item foi capturado. Exemplo datetime("2016-03-21")

@@ -11,7 +11,6 @@ from scrapy import Item, Field
 class ProxyItem(Item):
     ip = Field()
     port = Field()
-    code = Field()
     country = Field()
     anon = Field()
     protocol = Field()
