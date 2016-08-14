@@ -4,7 +4,6 @@ from scrapy.linkextractors import LinkExtractor
 from scrapy.loader import ItemLoader
 from proxies.items import ProxyItem
 from scrapy.loader.processors import TakeFirst, MapCompose
-from w3lib.html import remove_tags
 from datetime import datetime
 
 
@@ -13,7 +12,7 @@ class FoxtoolsSpider(CrawlSpider):
     allowed_domains = ['foxtools.ru']
     start_urls = ['http://foxtools.ru/Proxy']
 
-    #pagination
+    #working with pagination
     rules = (
         Rule(LinkExtractor(allow=r'page=\d+'), callback='parse_items', follow=True),
     )

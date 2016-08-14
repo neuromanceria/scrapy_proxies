@@ -1,0 +1,3 @@
+== USPROXY SPIDER ==
+[domains]: foxtools.ru
+[items]: IP, PORT, COUNTRY, PROTOCOL
