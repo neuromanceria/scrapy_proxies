@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import scrapy
+from scrapy import Spider, Request
 from urlparse import urljoin
 from scrapy.loader import ItemLoader
 from proxies.items import ProxyItem
@@ -7,7 +7,7 @@ from scrapy.loader.processors import TakeFirst, MapCompose
 from datetime import datetime
 
 
-class HidemeSpider(scrapy.Spider):
+class HidemeSpider(Spider):
     name = "hideme"
     allowed_domains = ["hideme.ru"]
     start_urls = (
@@ -18,7 +18,7 @@ class HidemeSpider(scrapy.Spider):
     	#working with pagination
         pagination = response.xpath("//li[@class='arrow__right']/a/@href").extract()
         if pagination:
-        	yield scrapy.Request(urljoin(response.url, pagination[0]), callback=self.parse)
+        	yield Request(urljoin(response.url, pagination[0]), callback=self.parse)
        	#selecting the table with the information
        	proxies = response.xpath("//table[@class='proxy__t']/tbody/tr")
        	for proxy in proxies:
